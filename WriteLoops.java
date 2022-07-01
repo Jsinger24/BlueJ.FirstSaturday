@@ -103,7 +103,7 @@ public class WriteLoops {
     public int nestedFors() {
         int w = 0;
         for(int i = 0; i < 20; i++) {
-            for (int j = 0; j <= 4; i++) {
+            for (int j = 0; j <= 4; j++) {
                 w = w + 1;
             }
         }
@@ -124,6 +124,15 @@ public class WriteLoops {
 
     public int helloZipCode() {
         int w = 0;
+        for (int i = 5; i < 105; i++){
+            if(i > 51){
+                System.out.println("Hello Zipcode");
+            }else {
+                w = w + 1;
+            }
+
+        }
+
 
         // Write a FOR loop that counts from 5 to 105. Put an IF
         // statement inside the loop that checks the
@@ -131,7 +140,7 @@ public class WriteLoops {
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+
             // each time through the inner loop
         
         return w;
@@ -160,13 +169,18 @@ public class WriteLoops {
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
+        while(!gpsCurrentLocation().equals("Home")){
+            driveSomeMore();
+            w++;
+        }
+        System.out.println("Honey, I'm Home!");
 
         // you need to use a .equals for two Strings.
 
             // calling
-            w = w + 1;
+//            w = w + 1;
             // each time through the inner loop
-        
+
 
             return w;
     }
